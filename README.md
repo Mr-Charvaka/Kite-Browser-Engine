@@ -16,26 +16,6 @@ It bundles a tiny, custom engine written in TypeScript and provides interactive 
 | **UI** | `src/components/*` | - `TopAppBar`, `SideNavBar`, `FooterBar` – consistent navigation and theming (Tailwind CSS).<br>- Each page is a self‑contained visualisation that subscribes to `TelemetryBus` to display live engine data. |
 | **State Management** | `EngineContext.tsx` | React context that wires the engine to the UI, providing hooks for the pages to dispatch actions and receive telemetry. |
 
-## 📁 Project Structure
-Kite/
-├─ public/ # static assets (favicon, icons)
-├─ src/
-│ ├─ assets/ # images used in the UI
-│ ├─ components/ # reusable UI components (TopAppBar, SideNavBar, FooterBar)
-│ ├─ core/
-│ │ ├─ html/ # HTMLTokenizer.ts, HTMLParser.ts
-│ │ ├─ memory/ # DOMArena.ts (in‑memory DOM storage)
-│ │ └─ observability/ # TelemetryBus.ts (event bus)
-│ ├─ pages/ # One page per engine stage (DOM, Layout, Paint, GPU, Scripting)
-│ ├─ EngineContext.tsx # React context linking the engine to the UI
-│ ├─ App.tsx # Root component with router & layout
-│ └─ main.tsx # Vite entry point
-├─ README.md # <‑‑ this file
-├─ package.json # dependencies (React, Vite, Tailwind, TypeScript)
-└─ vite.config.ts # Vite build config
-
-
-
 ## 🚀 Getting Started
 
 ```
