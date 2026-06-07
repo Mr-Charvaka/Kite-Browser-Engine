@@ -32,18 +32,21 @@ npm run dev
 Open http://localhost:5173 (or the URL shown in the console). Use the side navigation to explore each engine stage.
 
 📚 How It Works
-HTML → Tokenizer → Parser – HTMLTokenizer breaks raw HTML into tokens; HTMLParser builds a DOM tree stored in DOMArena.
+```HTML → Tokenizer → Parser – HTMLTokenizer breaks raw HTML into tokens; HTMLParser builds a DOM tree stored in DOMArena.
 Layout – Traverses the DOM, computes box dimensions, and creates a layout tree.
 Paint – Generates paint commands for each layout node, groups them into layers.
 GPU – Simulates GPU compositing by ordering layers and applying transforms.
 Scripting – A tiny JS sandbox runs snippets, mutates the DOM, and fires telemetry events so the UI updates instantly.
 All stages emit events on TelemetryBus, which the UI components listen to, allowing real‑time visual feedback.
+```
 
 🛠️ Extending Kite
-Add a new engine stage – Create a new folder under src/core/, implement the logic, emit events via TelemetryBus, then add a page under src/pages/.
+```Add a new engine stage – Create a new folder under src/core/, implement the logic, emit events via TelemetryBus, then add a page under src/pages/.
 Custom visualisations – Extend the UI components in src/components/ or create new ones. Hook them into the context with useEngineContext.
 Styling – Tailwind is already configured; modify src/App.css or add new utility classes.
-
+```
 📄 Objective
+```
 Kite is a learning tool for anyone curious about browser internals, from students to developers building custom rendering pipelines. Happy hacking! 🎉
 Feel free to adjust wording, add a badge section, or include screenshots of each page to make the README even richer.
+```
